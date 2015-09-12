@@ -1,0 +1,126 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Python Homework 1
+\end_layout
+
+\begin_layout Author
+if you have questions email me! meshko@gmail.com
+\end_layout
+
+\begin_layout Enumerate
+Take a look at some Python commands which work with lists here (some of
+ these things we talked about, some will be new to you): 
+\begin_inset Newline linebreak
+\end_inset
+
+https://github.com/meshko/pintro/blob/master/hw1/lists.py
+\begin_inset Newline linebreak
+\end_inset
+
+Try to guess what will happen when you run them and then try actually running
+ them.
+\end_layout
+
+\begin_layout Enumerate
+You have a list: [4, 2, 3, 5, 12, 8, 21].
+ Write a Python command which calculates the sum of all the numbers in this
+ list except the first one and last one (so in this case sum of all numbers
+ except 4 and 21)
+\end_layout
+
+\begin_layout Enumerate
+You can mix different things in a list! For example, [1, 'Masha', 2, 'Ana',
+ 3, 'Misha'].
+ Play with a list like that.
+ What commands work on it and what do not.
+ If something doesn't work, can you explain why?
+\end_layout
+
+\begin_layout Enumerate
+We have seen lists of numbers, like this: [1, 2, 5] and lists of “strings”
+ (words), like this: [“Ana”, “Anya”, “Masha”].
+ Can you think of something else we can put into a list? Can you make a
+ list of...
+ ?
+\end_layout
+
+\begin_layout Enumerate
+We played with dictionaries.
+ Dictionaries have keys and values.
+ For example, {'fish': 2, 'ice cream': 3, 'coffee': 12}.
+ We created a dictionary and stored our friends' names and ages in it.
+ Can you think of another example of something that would be nice to store
+ in a dictionary? Make some nice dictionaries please!
+\end_layout
+
+\end_body
+\end_document

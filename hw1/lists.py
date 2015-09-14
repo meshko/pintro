@@ -1,4 +1,4 @@
-list1 = [1, 1, 2, 3, 5, 8]
+list1 = [2, 3, 5, 7, 11, 13, 17]
 print(list1)
 
 print(sum(list1))

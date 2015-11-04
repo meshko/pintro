@@ -1,4 +1,4 @@
-list1 = [1, 1, 2, 3, 5, 8]
+list1 = [2, 3, 5, 7, 11, 13, 17]
 print(list1)
 
 print(sum(list1))
@@ -9,7 +9,7 @@ print("Misha" in list1)
 
 print(list1[0])
 print(list1[-1])
-print(list1[3:5])
+print(list1[3:6])
 print(list1[2:])
 
 list1.reverse()

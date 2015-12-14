@@ -15,8 +15,9 @@ running = True
 
 clock = pygame.time.Clock()
 balls = []
-for _ in range(0, 20):
-     ball = [[randrange(800), randrange(600)], [randrange(255), randrange(255), randrange(255)], randrange(10,20), [randrange(-10, 10), randrange(-10, 10)]]
+for _ in range(0, 40):
+     radius = randrange(10,35)
+     ball = [[randrange(radius, 800-radius), randrange(radius, 600-radius)], [randrange(255), randrange(255), randrange(255)], radius, [randrange(-5, 5), randrange(-5, 5)]]
      balls.append(ball)
 
 #balls.append([[100, 200],[255,255,255],20,[10,1]])
@@ -29,15 +30,18 @@ while running:
     screen.fill((0, 0, 0))
     for ball in balls:
         pygame.draw.circle(screen, ball[1], (int(ball[0][0]), int(ball[0][1])),  ball[2])
-        ball[0][0] += ball[3][0]
-        ball[0][1] += ball[3][1]
-        if ball[0][0] > 800 - ball[2] or ball[0][0] < ball[2]:
+        newx = ball[0][0] + ball[3][0]
+        newy = ball[0][1] + ball[3][1]
+        collide = False
+        if newx > 800 - ball[2] or newx < ball[2]:
             ball[3][0] *= -1
-        if ball[0][1] > 600 - ball[2]  or ball[0][1] < ball[2]:
+            collide = True
+        if newy > 600 - ball[2] or newy < ball[2]:
             ball[3][1] *= -1
+            collide = True
         #ball[3][1] += .2
-        if ball[0][1] > 600 - ball[2]:
-           ball[0][1] = 600 - ball[2]
+        if not collide:
+            ball[0] = [newx, newy]
     for i in range(0, len(balls)):
         for j in range(i+1, len(balls)):
             if ball_distance(balls[i], balls[j]) <= balls[i][2] + balls[j][2]:

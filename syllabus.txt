@@ -1,0 +1,27 @@
+1) variables, data types, numbers, strings, lists, dictionaries, binary numbers
+2) input, output, running a program from a file, start on friends list program
+3) continue "friends" conditions, while loop
+4) continue "friends", continue about while loop
+5) finish friends list program (write to a file, read from a file)
+6) LOGO (i.e. turtle) -- triange, square, 
+7) equiletaral polygons, circle, functions
+8) star, combine functions, Koch snowflake fractal
+9) pygame: blinking color
+10) random circles and rectangles
+11) stars
+12) finish starts (fly 'em) [skipped, why? flying start is fun...]
+13) bouncing ball
+14) bouncing balls
+15) bouncing balls -- add ball-to-ball collisions
+16) ball-to-ball collision is hard
+17) typing game -- one word falling
+18) typing gmae -- word is a class now, multiple words falling
+19) typing game: select current word, remove it when done typing it
+20) typing game: add words at equal time intervals, read new words from a dictionary file
+21) typing game: improve interval, fix the problem of multiple words starting with the same letter at the same time...
+...
+...
+xx) game of life?
+yy) rally game rules, draw the square field? or tetris? or what?
+..
+

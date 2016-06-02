@@ -1,7 +1,8 @@
 import pygame
 from random import randrange 
 import math
-#import coll
+import coll
+import sys
 pygame.mixer.init()
 sound=pygame.mixer.Sound('evil.wav')
 
@@ -52,6 +53,9 @@ f.close()
 new_word_interval=45
 current_word=None
 count = 0
+total_letters = 0
+correct_letters = 0
+completed_words = 0
 
 while running:
     if count %round (new_word_interval)==0:
@@ -62,6 +66,7 @@ while running:
     if event.type == pygame.KEYDOWN:
         if event.key in range(0,256):
             print chr(event.key)
+            total_letters=total_letters+1
             letter=chr(event.key)
             if current_word is None: 
                 for word in words:
@@ -69,11 +74,13 @@ while running:
                         current_word = word
                         break 
             if current_word is not None and current_word.text[0] == letter:
+                correct_letters=correct_letters+1
                 current_word.text = current_word.text[1:]
                 current_word.rendertext = font.render(current_word.text, 1, (255,255,255))
                 if len(current_word.text)==0:
                     words.remove(current_word)
                     current_word=None
+                    completed_words=completed_words+1
             else:
                 sound.play()
 
@@ -82,7 +89,15 @@ while running:
     for word in words:
         screen.blit(word.rendertext, word.textpos)
         word.textpos=word.textpos.move(0,1)
+        if word.textpos.top+word.textpos.height>=600:
+            sys.exit()
     
+    if total_letters > 0:
+        error_rate = (100*(total_letters-correct_letters)/total_letters)
+        score = "ERR: %.2d%% WORDS: %d" % (error_rate, completed_words)
+        scoretext = font.render(score, 1, [255,255,255])            
+        screen.blit(scoretext, [10, 10])
+
     pygame.display.flip()
     clock.tick(24)
     count = count+1

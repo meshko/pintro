@@ -1,10 +1,9 @@
 import pygame
 from random import randrange 
 import math
-import coll
 import sys
-pygame.mixer.init()
-sound=pygame.mixer.Sound('evil.wav')
+#pygame.mixer.init()
+#sound=pygame.mixer.Sound('evil.wav')
 
 #word="python spy"
 #"After the death of Han Solo the resistance"
@@ -36,7 +35,7 @@ class Word:
         self.color=(0,0,255)
         self.rendertext = font.render(self.text, 1, self.color)
         word_width = self.rendertext.get_size()[0]
-        self.textpos = self.rendertext.get_rect(centerx=randrange(word_width/2,800-word_width/2)) # screen.get_width()/2
+        self.textpos = self.rendertext.get_rect(centerx=randrange(word_width//2,800-word_width//2)) # screen.get_width()/2
 
 def get_random_word():
     word_index=randrange(0,len(nouns))
@@ -65,7 +64,6 @@ while running:
         running = False
     if event.type == pygame.KEYDOWN:
         if event.key in range(0,256):
-            print chr(event.key)
             total_letters=total_letters+1
             letter=chr(event.key)
             if current_word is None: 
@@ -81,8 +79,6 @@ while running:
                     words.remove(current_word)
                     current_word=None
                     completed_words=completed_words+1
-            else:
-                sound.play()
 
 
     screen.fill((0,0,0))

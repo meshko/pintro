@@ -14,7 +14,7 @@ def calc_speed(ball1, ball2):
     xd = vdiff(x1, x2)
     vd = vdiff(v1, v2)
     if norm(xd) == 0:
-       print ball1, ball2
+       print(ball1, ball2)
     coeff = 2*m2 / (m1 + m2) * dot_prod(vd, xd) / (norm(xd) * norm(xd))
     xds = vmult(xd, coeff)
     return vdiff(v1, xds)

@@ -26,10 +26,6 @@ def gon(n):
       t.forward(20)
       t.left(360.0/n)
 
-def hello3(x, y):
-   print t.pos()
-   print x, y
-
 t = turtle.Turtle()
 
 #for i in range(1,4):
